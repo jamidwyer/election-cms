@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-      "Name": "jami/elections:allow",
+      "Name": "jami/elections:latest",
       "Update": "true"
     },
     "Ports": [

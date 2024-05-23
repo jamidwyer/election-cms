@@ -40,10 +40,10 @@ Visit: http://0.0.0.0:8000/
 ## Deploy
 
 - change tag in dockerrun.aws.json
-- docker build -t election-cms .
-- docker tag elections:latest <your dockerhub username>/election-cms:<new tag>
-- docker push <your dockerhub username>/election-cms:<new tag>
-- eb deploy
+- docker build -t elections .
+- docker tag elections:latest <your dockerhub username>/elections:latest
+- docker push <your dockerhub username>/elections:latest
+- eb deploy elections-dev
 
 ## Demo
 
@@ -53,7 +53,6 @@ Feel free to check it out here: http://elections-dev.us-west-2.elasticbeanstalk.
 
 ### MVP
 
-- why does candidate have an end date lol
 - make something that uses the api to see what fields i need to add/change
 - handle data correctly. shouldn't be sqlite on whatever server it's on.
 - contributor verification
