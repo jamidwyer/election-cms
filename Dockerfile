@@ -18,5 +18,8 @@ RUN pip install -r requirements.txt
 # Expose the port server is running on
 EXPOSE 8000
 
+# Run migrations
+RUN python manage.py migrate
+
 # Start the server
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
