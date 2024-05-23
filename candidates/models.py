@@ -16,8 +16,6 @@ class Candidate(models.Model):
 #    funder = models.ManyToManyField(Organization)
 #   memberOf = models.ManyToManyField(Organization)
 #   worksFor = models.ManyToManyField(Organization)
-    startDate = models.DateTimeField()
-    endDate = models.DateTimeField()
     location = models.ManyToManyField(State)
     # eventSchedule
     # organizer = models.Organization()

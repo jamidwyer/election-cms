@@ -6,12 +6,15 @@ Current status: empty state, event, and candidate REST endpoints. Probably will 
 
 ## Requirements
 Python 3
+
 Docker
+
 AWS cli
 
 ## Setup
-`git clone`
-`cd elections`
+`git clone git@github.com:jamidwyer/election-cms.git`
+
+`cd election-cms`
 
 ## Develop (no Docker)
 
@@ -28,8 +31,8 @@ Visit: http://127.0.0.1:8000/
 ## Develop (Docker)
 
 ```
-docker build -t elections .
-docker run -p 8000:8000 elections
+docker build -t election-cms .
+docker run -p 8000:8000 election-cms
 ```
 
 Visit: http://0.0.0.0:8000/
@@ -37,9 +40,9 @@ Visit: http://0.0.0.0:8000/
 ## Deploy
 
 - change tag in dockerrun.aws.json
-- docker build -t elections .
-- docker tag elections:latest <your dockerhub username>/elections:<new tag>
-- docker push <your dockerhub username>/elections:<new tag>
+- docker build -t election-cms .
+- docker tag elections:latest <your dockerhub username>/election-cms:<new tag>
+- docker push <your dockerhub username>/election-cms:<new tag>
 - eb deploy
 
 ## Demo
@@ -49,7 +52,8 @@ Feel free to check it out here: http://elections-dev.us-west-2.elasticbeanstalk.
 ## Roadmap
 
 ### MVP
-- github
+
+- why does candidate have an end date lol
 - make something that uses the api to see what fields i need to add/change
 - handle data correctly. shouldn't be sqlite on whatever server it's on.
 - contributor verification
@@ -61,6 +65,8 @@ Feel free to check it out here: http://elections-dev.us-west-2.elasticbeanstalk.
 - better docs
 
 ### Maybe
+- activityfeed
+- graphql
 - eks instead of eb?
 
 ## Thanks
